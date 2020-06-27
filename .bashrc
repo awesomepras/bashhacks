@@ -34,7 +34,7 @@ alias vagdown='vagrant halt'
 alias vagup='vagrant up'
 
 
-#https://confluence.agile.bns/display/devops/Automatic+proxy+detection+and+setting+for+bash+on+Mac
+#
 # include ~/bin in PATH
 PATH="/usr/local/sbin:${HOME}/bin:$PATH"
  
@@ -49,4 +49,4 @@ PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 [[ -f ~/.bash_functions ]] && source ~/.bash_functions
  
 # Set the proxy if it needs to be set
-bns_proxy_update
+
