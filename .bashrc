@@ -2,7 +2,7 @@
 alias cls='clear'
 alias ls='ls -F'
 alias ll='ls -althr'
-alias bit='cd ~/Documents/bitbucket'
+#alias bit='cd ~/Documents/bitbucket'
 alias cpv='rsync -ah --info=progress2'
 alias home='cd ~/Documents/'
 
