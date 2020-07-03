@@ -48,7 +48,9 @@ syntax on
 colorscheme industry
 
 " for yaml file
-au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
-autocmd FileType yaml setlocal et ts=2 ai sw=2 nu sts=0 
+au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml 
+autocmd FileType yaml setlocal et ts=2 ai sw=2 nu sts=0 colorcolumn=1,3,5,7,9,11
 set listchars=tab:\|\
 set list
+hi Normal guibg=#32322f ctermbg=236
+hi ColorColumn guibg=#000000 ctermbg=0
