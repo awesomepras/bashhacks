@@ -11,28 +11,33 @@ alias gst='git status'
 alias gbr='git branch -a'
 alias gcom='git add . && git commit -m'
 alias gcl='git clone'
-alias gpu='git push -u origin'
+alias gpo='git push -u origin'
+alias gpu='git pull'
 
 #shell alias
 alias sourcerc='. ~/.bashrc'
-
+alias diff='diff -y  --suppress-common-lines'
 # Set Vim as my default editor
 export EDITOR=vim
 export HISTTIMEFORMAT="%h %d %H:%M:%S "
 export HISTSIZE=10000
 shopt -s histappend
 export HISTCONTROL=ignorespace:erasedups
-export HISTIGNORE="ls:ps:history:clear:cls:ll:pwd:cd:git:vag:less:exit"
+export HISTIGNORE="ls:ps:history:clear:cls:ll:pwd:cd:git:vag:less:exit:vaglocal:vagglobal:vagdestroy:vagup:vagrant reload"
 
 #Vagrant aliases
-alias gocent='cd ~/Documents/vagrant/centos/'
-alias goub='cd ~/Documents/vagrant/ubuntu/'
-alias vagstat='vagrant status'
+alias vaglocal='vagrant status'
 alias vagssh='vagrant ssh'
 alias vagdel='vagrant destroy'
 alias vagdown='vagrant halt'
 alias vagup='vagrant up'
+alias vagglobal='vagrant global-status'
 
+#docker related
+alias dockerup='open --hide --background -a Docker'
+alias vagdup='vagrant up --provider=docker --no-parallel'
+alias dockerclean='docker rmi $(docker images -f "dangling=true" -q)'
+alias dockerbomb='docker system prune -a'
 
 #
 # include ~/bin in PATH
